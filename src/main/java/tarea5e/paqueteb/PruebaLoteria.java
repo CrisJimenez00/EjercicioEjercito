@@ -4,7 +4,9 @@
  */
 package tarea5e.paqueteb;
 
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 /**
  *
@@ -12,7 +14,7 @@ import java.util.Random;
  */
 public class PruebaLoteria {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {  
         Random rd = new Random();
 
         Loteria loteria = new Loteria();

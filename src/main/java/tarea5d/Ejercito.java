@@ -7,6 +7,7 @@ package tarea5d;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 /**
@@ -33,7 +34,7 @@ public class Ejercito {
     }
 
     //Método el cual sabe si el ejercito no tiene soldados
-    public boolean noSoldados() {
+    public boolean tieneSoldados() {
         return lista.isEmpty();
 
     }
@@ -50,6 +51,15 @@ public class Ejercito {
         for (Soldado soldado : lista) {
             listaSoldados.add(soldado);
         }
+        //OTRA FORMA DE HACERLO(Más directo y fácil)
+//        ArrayList<Soldado> listaSoldados2 = new ArrayList<>(lista);
+
+        //El objeto Iterator sirve para recorrer todos los elementos de una estructura de datos
+        //Es equivalente a usar el for/each
+//        Iterator<Soldado> iterador = lista.iterator();
+//        while (iterador.hasNext()) {
+//            Soldado soldado = iterador.next();
+//        }
         return listaSoldados;
     }
 
@@ -57,6 +67,13 @@ public class Ejercito {
     public void desmatricularSoldado(Soldado s) {
         lista.remove(s);
 
+    }
+    
+    public void mostrarLista(){
+        for (Soldado soldado : lista) {
+            System.out.println(soldado);
+        }
+    
     }
 
 }

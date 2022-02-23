@@ -58,5 +58,11 @@ public class EjercitoOrdenado {
         lista.remove(s);
 
     }
+    public void mostrarLista(){
+        for (Soldado soldado : lista) {
+            System.out.println(soldado);
+        }
+    
+    }
 
 }

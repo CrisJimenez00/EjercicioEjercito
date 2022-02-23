@@ -28,14 +28,15 @@ public class PruebaEjercitoOrdenado {
 
         System.out.println("En el ejercito hay: " + lista.numeroSoldados() + " soldados");
         listaSoldados = lista.arraySoldados();
-        for (Soldado listaSoldado : listaSoldados) {
-            System.out.println(listaSoldado);
-        }
+        lista.mostrarLista();
         lista.containsSoldado(new Soldado("09117894L", "Pepe", "Martinez", "Velez", 23));
         lista.desmatricularSoldado(new Soldado("09117897P", "Juan", "Sanchez", "Chacon", 30));
         System.out.println("¿La lista de soldados está vacía? " + lista.noSoldados());
-        boolean resultado = lista.containsSoldado(new Soldado("22117894Q", "Antonia", "Vazquez", "Vera", 18));
+
+        boolean resultado = lista.containsSoldado(new Soldado("22117894L", "Antonia", "Vazquez", "Vera", 18));
         System.out.println("¿Está el soldado introducido?: " + resultado);
+        System.out.println("Después de eliminar los soldados----------");
+        lista.mostrarLista();
     }
 
 }

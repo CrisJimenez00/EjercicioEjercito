@@ -30,17 +30,19 @@ public class PruebaTraductor {
         diccionario.anadeElemento("cook", "cocinar");
 
         //traduce una palabra
-        System.out.println("small: " + diccionario.traducir("small"));
+        System.out.println("La palabra have significado");
+        System.out.println("have: " + diccionario.traducir("have"));
 
         //borra una traduccion
-        diccionario.eliminarElemento("give");
+        System.out.println("Elimina la palabra right");
+        diccionario.eliminarElemento("right");
 
         //modifica una traduccion
         diccionario.modificarpalabra("bye", "chiao");
 
         System.out.println("IMPRIME LA LISTA SIN LA MODIFICACION CON LAS KEYS---------");
         //imprime listado de Keys
-        for (String key : diccionario.listadoKeys()) {
+        for (String key : diccionario.listaIngles()) {
             System.out.println(key);
         }
 
@@ -48,7 +50,7 @@ public class PruebaTraductor {
         diccionario.modificarpalabra("bye", "chiao");
         System.out.println("LISTA MODIFICADA EL BYE IMPRIME POR VALUE--------");
         //imprime listado de Values
-        for (String value : diccionario.listadoValues()) {
+        for (String value : diccionario.listaEspaniol()) {
             System.out.println(value);
         }
     }

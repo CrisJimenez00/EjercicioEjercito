@@ -19,9 +19,10 @@ public class PruebaEjercito {
     public static void main(String[] args) {
         //Creamos la lista de soldados
         Ejercito lista = new Ejercito();
+        
         //ArrayList de soldados
         ArrayList<Soldado> listaSoldados = new ArrayList<>();
-
+        
         //Añadimos objeros a la lista
         lista.alistarSoldado(new Soldado("09117894L", "Pepe", "Martinez", "Velez", 23));
         lista.alistarSoldado(new Soldado("09117876N", "Antonio", "Fernández", "Martinez", 40));
@@ -36,8 +37,12 @@ public class PruebaEjercito {
         }
         lista.containsSoldado(new Soldado("09117894L", "Pepe", "Martinez", "Velez", 23));
         lista.desmatricularSoldado(new Soldado("09117897P", "Juan", "Sanchez", "Chacon", 30));
-        System.out.println("¿La lista de soldados está vacía? " + lista.noSoldados());
-        boolean resultado = lista.containsSoldado(new Soldado("22117894Q", "Antonia", "Vazquez", "Vera", 18));
+
+        System.out.println("-----DESPUÉS DE DESMATRICULAR--------");
+        lista.mostrarLista();
+
+        System.out.println("¿La lista de soldados está vacía? " + lista.tieneSoldados());
+        boolean resultado = lista.containsSoldado(new Soldado("01117898T", "Manuela", "Jiménez", "Bénitez", 20));
         System.out.println("¿Está el soldado introducido?: " + resultado);
     }
 
