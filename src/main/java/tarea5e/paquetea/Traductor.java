@@ -32,7 +32,7 @@ public class Traductor {
     }
 
     //Método el cual hace que modifiques (también vale put pero en este caso viene mejor replace)
-    public void modificarpalabra(String ingles, String espaniol) {
+    public void modificarPalabra(String ingles, String espaniol) {
         traductor.replace(ingles, espaniol);
     }
 

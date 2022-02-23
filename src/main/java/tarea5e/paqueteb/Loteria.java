@@ -20,14 +20,17 @@ public class Loteria {
 
     }
 
+    //Método el cual añade premios al map
     public void addPremio(String decimo, Integer premio) {
         this.listadoPremios.put(decimo, premio);
     }
 
+    //Metodo el cual coge el premio
     public Integer consulta(String decimo) {
         return this.listadoPremios.get(decimo);
     }
 
+    //Metodo el cual devuelve todo el listado de premios
     public Map<String, Integer> listadoPremios() {
         return listadoPremios;
     }

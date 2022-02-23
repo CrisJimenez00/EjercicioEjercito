@@ -38,7 +38,7 @@ public class PruebaTraductor {
         diccionario.eliminarElemento("right");
 
         //modifica una traduccion
-        diccionario.modificarpalabra("bye", "chiao");
+        diccionario.modificarPalabra("bye", "chiao");
 
         System.out.println("IMPRIME LA LISTA SIN LA MODIFICACION CON LAS KEYS---------");
         //imprime listado de Keys
@@ -47,7 +47,7 @@ public class PruebaTraductor {
         }
 
         //modifica una traduccion
-        diccionario.modificarpalabra("bye", "chiao");
+        diccionario.modificarPalabra("bye", "chiao");
         System.out.println("LISTA MODIFICADA EL BYE IMPRIME POR VALUE--------");
         //imprime listado de Values
         for (String value : diccionario.listaEspaniol()) {
