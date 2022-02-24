@@ -29,6 +29,10 @@ public class PruebaTraductor {
         diccionario.anadeElemento("left", "izquierdo");
         diccionario.anadeElemento("cook", "cocinar");
 
+        System.out.println("-----------Lista sin modificar------------");
+        diccionario.imprimir();
+        
+        System.out.println("------------------");
         //traduce una palabra
         System.out.println("La palabra have significado");
         System.out.println("have: " + diccionario.traducir("have"));
@@ -53,5 +57,7 @@ public class PruebaTraductor {
         for (String value : diccionario.listaEspaniol()) {
             System.out.println(value);
         }
+        System.out.println("-----------Lista final-------------");
+        diccionario.imprimir();
     }
 }

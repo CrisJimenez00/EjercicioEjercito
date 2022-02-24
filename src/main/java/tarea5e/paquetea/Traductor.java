@@ -5,8 +5,9 @@
 package tarea5e.paquetea;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.TreeMap;
 
 /**
  *
@@ -18,7 +19,7 @@ public class Traductor {
 
     //Constructor inicializado con HashMap
     public Traductor() {
-        this.traductor = new HashMap();
+        this.traductor = new TreeMap();
     }
 
     //Método el cual añade elementos
@@ -43,14 +44,26 @@ public class Traductor {
 
     //Método el cual devuelve todas las palabras en inglés
     public ArrayList<String> listaIngles() {
-        ArrayList<String> palabrasIngles = new ArrayList<String>(traductor.keySet());
+        ArrayList<String> palabrasIngles = new ArrayList<>(traductor.keySet());
         return palabrasIngles;
+//        traductor.values();//Te recuelve un collection genérico
     }
 
     //Método el cual deuvleve todas las palabras en español
     public ArrayList<String> listaEspaniol() {
-        ArrayList<String> palabrasEspaniol = new ArrayList<String>(traductor.values());
+        ArrayList<String> palabrasEspaniol = new ArrayList<>(traductor.values());
         return palabrasEspaniol;
+    }
+
+    //Método el cual imprime el map completo(otra forma de imprimirlo)
+    public void imprimir() {
+        
+        //Se importa import java.util.Map.Entry 
+        
+        for (Map.Entry<String, String> aux : traductor.entrySet()) {
+            System.out.println(aux.getKey() + " - " + aux.getValue());
+        }
+        
     }
 
 }
