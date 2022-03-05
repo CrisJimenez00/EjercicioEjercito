@@ -4,6 +4,7 @@
  */
 package tarea5e.paqueteb;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
@@ -14,25 +15,14 @@ import java.util.Set;
  */
 public class PruebaLoteria {
 
-    public static void main(String[] args) {  
-        Random rd = new Random();
+    public static void main(String[] args) {
 
         Loteria loteria = new Loteria();
-        String aux;
-        for (int i = 0; i < 1000; i++) {
-            aux = "";
-            for (int j = 0; j < 5; j++) {
-                aux += rd.nextInt(10);
-            }
-            loteria.addPremio(aux, rd.nextInt(4000000));
-        }
+        loteria.generar1000casos();
         //Comprueba un numero, va a dar null casi siempre
         System.out.println("Premio del 12345: " + loteria.consulta("12345") + "€");
 
-        //Consultamos uno que exista
-        String decimoExistente = loteria.listadoPremios().keySet().toArray()[0].toString();
+        loteria.imprimir();
 
-        System.out.println("Premio del " + decimoExistente + ": "
-                + loteria.consulta(decimoExistente) + "€");
     }
 }

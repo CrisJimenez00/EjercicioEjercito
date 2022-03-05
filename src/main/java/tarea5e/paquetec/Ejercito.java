@@ -65,15 +65,5 @@ public class Ejercito {
         }
 
     }
-//    //Método el cual imprime el map completo(otra forma de imprimirlo)
-//    public void imprimir() {
-//        
-//        //Se importa import java.util.Map.Entry 
-//        
-//        for (Map.Entry<String, String> aux : lista.entrySet()) {
-//            System.out.println(aux.getKey() + " - " + aux.getValue());
-//        }
-//        
-//    }
 
 }

@@ -4,8 +4,10 @@
  */
 package tarea5e.paqueteb;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 /**
  *
@@ -30,9 +32,24 @@ public class Loteria {
         return this.listadoPremios.get(decimo);
     }
 
-    //Metodo el cual devuelve todo el listado de premios
-    public Map<String, Integer> listadoPremios() {
-        return listadoPremios;
+    public void imprimir() {
+        for (String aux : listadoPremios.keySet()) {
+            System.out.println("El premio del boleto: " + aux + " es de: " + listadoPremios.get(aux) + "€");
+        }
+    }
+
+    public void generar1000casos() {
+        Random random = new Random();
+        String aux;
+        //Aquí geneamos los 1000 registros 
+        for (int i = 0; i < 1000; i++) {
+            aux = "";
+            for (int j = 0; j < 5; j++) {
+                aux += random.nextInt(10);
+            }
+            addPremio(aux, random.nextInt(40000));
+        }
+
     }
 
 }
